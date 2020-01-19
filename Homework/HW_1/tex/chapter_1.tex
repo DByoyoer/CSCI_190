@@ -10,29 +10,29 @@
 \item The moon is made of green cheese.
 \item 2n $\geq$ 100.
 \end{enumerate}
-\textbf{Answer:} c and e are both propositions, and both of their truth values are false. 
+\textbf{Answer:} c and e are both propositions, and both of their truth values are false.
 \item[4.]What is the negation of each of these propositions?
 \begin{enumerate}[a.]
-\item Jennifer and Teja are friends.
-\item There are 13 items in a baker’s dozen.
-\item Abby sent more than 100 text messages every day.
-\item 121 is a perfect square.
+    \item Jennifer and Teja are friends.
+    \item There are 13 items in a baker’s dozen.
+    \item Abby sent more than 100 text messages every day.
+    \item 121 is a perfect square.
 \end{enumerate}
 \textbf{Answer:}
 \begin{enumerate}[a.]
-\item Jennifer and Teja are not friends.
-\item There aren’t 13 items in a baker’s dozen.
-\item Abby sent less than or equal to 100 text messages every day.
-\item 121 is not a perfect square.
+    \item Jennifer and Teja are not friends.
+    \item There aren’t 13 items in a baker’s dozen.
+    \item Abby sent less than or equal to 100 text messages every day.
+    \item 121 is not a perfect square.
 \end{enumerate}
 \item[6.]Suppose that Smartphone A has 256 MB RAM and 32 GB ROM, and the resolution of its camera is 8 MP; Smartphone B has 288 MB RAM and 64 GB ROM, and the resolution of its camera is 4 MP; and Smartphone C has 128 MB RAM and 32 GB ROM, and the resolution of
 its camera is 5 MP. Determine the truth value of each of these propositions.
 \begin{enumerate}[a.]
-\item Smartphone B has the most RAM of these three smartphones.
-\item Smartphone C has more ROM or a higher resolution camera than Smartphone B.
-\item Smartphone B has more RAM, more ROM, and a higher resolution camera than Smartphone A.
-\item If Smartphone B has more RAM and more ROM than Smartphone C, then it also has a higher resolution camera.
-\item Smartphone A has more RAM than Smartphone B if and only if Smartphone B has more RAM than Smartphone A.
+    \item Smartphone B has the most RAM of these three smartphones.
+    \item Smartphone C has more ROM or a higher resolution camera than Smartphone B.
+    \item Smartphone B has more RAM, more ROM, and a higher resolution camera than Smartphone A.
+    \item If Smartphone B has more RAM and more ROM than Smartphone C, then it also has a higher resolution camera.
+    \item Smartphone A has more RAM than Smartphone B if and only if Smartphone B has more RAM than Smartphone A.
 \end{enumerate}
 \textbf{Answer:}
 \begin{enumerate}[a.]
@@ -48,41 +48,164 @@ its camera is 5 MP. Determine the truth value of each of these propositions.
 \begin{itemize}
     \item [2.]You can see the movie only if you are over 18 years old or you have the permission of a parent. Express your answer in terms of m: “You can see the movie,” e: “You are over 18 years old,” and p: “You have the permission of a parent.”
 
-    \textbf{Answer:} $m \rightarrow (e \lor p)$
+          \textbf{Answer:} $m \to (e \lor p)$
     \item[4.]To use the wireless network in the airport you must pay the daily fee unless you are a subscriber to the service. Express your answer in terms of w: “You can use the wire-
-less network in the airport,” d: “You pay the daily fee,” and s: “You are a subscriber to the service.”
+          less network in the airport,” d: “You pay the daily fee,” and s: “You are a subscriber to the service.”
 
-    \textbf{Answer:} $w \rightarrow (d \lor s)$
+          \textbf{Answer:} $w \to (d \lor s)$
 \end{itemize}
 
 \subsection{1.3}
 \begin{itemize}
- \item[6.]Use a truth table to verify the first De Morgan law
+    \item[6.]Use a truth table to verify the first De Morgan law
 
-\[
-    \neg (p \land q) \equiv \neg p \lor \neg q 
-\]
-\textbf{Answer:}
-\begin{longtable}[c]{|l|l|l|l|l|l|}
-    \hline
-   \textit{p} & \textit{q} & $\neg p$ & $\neg q$ & $\neg (p \land q)$ & $\neg p \lor \neg q$ \\
-   \hline
-   \endfirsthead
-   T & T & F & F & F & F \\
-   \hline
-   T & F & F & T & T & T \\
-   \hline
-   F & T & T & F & T & T \\
-   \hline
-   F & F & T & T & T & T \\
-   \hline
-\end{longtable}
-\item[8.]Use De Morgan’s laws to find the negation of each of the following statements 
-\begin{enumerate}[a.]
-\item Kwame will take a job in industry or go to graduate school.
-\item Yoshiko knows Java and calculus.
-\item James is young and strong.
-\item Rita will move to Oregon or Washington.
-\end{enumerate}   
+          \[
+              \neg (p \land q) \equiv \neg p \lor \neg q
+          \]
+          \textbf{Answer:}
+          \begin{longtable}[c]{|l|l|l|l|l|l|}
+              \hline
+              \textit{p} & \textit{q} & $\neg p$ & $\neg q$ & $\neg (p \land q)$ & $\neg p \lor \neg q$ \\
+              \hline
+              \endfirsthead
+              T          & T          & F        & F        & F                  & F                    \\
+              \hline
+              T          & F          & F        & T        & T                  & T                    \\
+              \hline
+              F          & T          & T        & F        & T                  & T                    \\
+              \hline
+              F          & F          & T        & T        & T                  & T                    \\
+              \hline
+          \end{longtable}
+    \item[8.]Use De Morgan’s laws to find the negation of each of the following statements
+          \begin{enumerate}[a.]
+              \item Kwame will take a job in industry or go to graduate school.
+              \item Yoshiko knows Java and calculus.
+              \item James is young and strong.
+              \item Rita will move to Oregon or Washington.
+          \end{enumerate}
+          \textbf{Answer:}
+          \begin{enumerate}[a.]
+              \item Kwame will not take a job in industry and not go to graduate school.
+              \item Yoshiko doesn’t know Java or doesn’t know calculus.
+              \item James is not young or not strong.
+              \item Rita will not move to Oregon and will not move to Washington.
+          \end{enumerate}
+    \item[10.]Show that each of these conditional statements is a tautology by using truth tables.
+          \begin{enumerate}[a.]
+              \item $[\neg p \land (p \lor q)] \to q$
+              \item $[(p \to q) \land (q \to r)] \to (p \to r)$
+              \item $[p \land (p \to q)] \to q$
+              \item $[(p \lor q) \land (p \to r) \land (q \to r)] \to r$
+          \end{enumerate}
+          \textbf{Answer:}
+          \begin{enumerate}[a.]
+              \item
+                    \begin{tabular}{|l|l|l|l|l|l|}
+                        \hline
+                        \textit{p} & \textit{q} & $\neg p$ & $p \lor q$ & $[\neg p \land (p \lor q)]$ & $[\neg p \land (p \lor q)] \to q$ \\
+                        \hline
+                        T          & T          & F        & T          & F                           & T                                 \\
+                        \hline
+                        T          & F          & F        & T          & F                           & T                                 \\
+                        \hline
+                        F          & T          & T        & T          & T                           & T                                 \\
+                        \hline
+                        F          & F          & T        & T          & T                           & T                                 \\
+                        \hline
+                    \end{tabular}
+                    \\
+                    \\
+              \item
+                    \begin{tabular}{|l|l|l|l|l|l|l|p{3cm}|}
+                        \hline
+                        \textit{p} & \textit{q} & \textit{r} & $p \to q$ & $q \to r$ & $p \to r$ & $[(p \to q) \land (q \to r)]$ & $[(p \to q) \land (q \to r)] \newline \to (p \to r)$ \\
+                        \hline
+                        T          & T          & T          & T         & T         & T         & T                             & T                                                    \\
+                        \hline
+                        T          & T          & F          & T         & F         & F         & F                             & T                                                    \\
+                        \hline
+                        T          & F          & T          & F         & T         & T         & T                             & T                                                    \\
+                        \hline
+                        T          & F          & F          & F         & T         & T         & F                             & T                                                    \\
+                        \hline
+                        F          & T          & T          & T         & T         & T         & T                             & T                                                    \\
+                        \hline
+                        F          & T          & F          & T         & F         & T         & F                             & T                                                    \\
+                        \hline
+                        F          & F          & T          & T         & T         & T         & T                             & T                                                    \\
+                        \hline
+                        F          & F          & F          & T         & T         & T         & T                             & T                                                    \\
+                        \hline
+                    \end{tabular}
+                    \\
+                    \\
+              \item
+                    \begin{tabular}{*{5}{|l}|}
+                        \hline
+                        \textit{p} & \textit{q} & $p \to q$ & $p \land (p \to q)$ & $[p \land (p \to q)] \to q$ \\
+                        \hline
+                        T          & T          & T         & T                   & T                           \\
+                        \hline
+                        T          & F          & F         & F                   & T                           \\
+                        \hline
+                        F          & T          & T         & F                   & T                           \\
+                        \hline
+                        F          & F          & T         & F                   & T                           \\
+                        \hline
+                    \end{tabular}
+                    \newpage
+              \item
+                    \begin{tabular}{*{6}{|l} *{2}{|p{3.2cm}}|}
+                        \hline
+                        \textit{p} & \textit{q} & \textit{r} & $p \lor q$ & $p \to r$ & $q \to r$ & $[(p \lor q) \land (p \to r) \land (q \to r) $ & $[(p \lor q) \land (p \to r) \land (q \to r)] \to r$
+                        \\
+                        \hline
+                        T          & T          & T          & T          & T         & T         & T                                              & T                                                    \\
+                        \hline
+                        T          & T          & F          & T          & F         & F         & F                                              & T                                                    \\
+                        \hline
+                        T          & F          & T          & F          & T         & T         & T                                              & T                                                    \\
+                        \hline
+                        T          & F          & F          & F          & T         & T         & F                                              & T                                                    \\
+                        \hline
+                        F          & T          & T          & T          & T         & T         & T                                              & T                                                    \\
+                        \hline
+                        F          & T          & F          & T          & F         & T         & F                                              & T                                                    \\
+                        \hline
+                        F          & F          & T          & T          & T         & T         & T                                              & T                                                    \\
+                        \hline
+                        F          & F          & F          & T          & T         & T         & T                                              & T                                                    \\
+                        \hline
+                    \end{tabular}
+
+          \end{enumerate}
+    \item[12]Show that each conditional statement in Exercise 10 is a tautology without using truth tables.
+          \begin{enumerate}[a.]
+              \item $[\neg p \land (p \lor q)] \to q$
+              \item $[(p \to q) \land (q \to r)] \to (p \to r)$
+              \item $[p \land (p \to q)] \to q$
+              \item $[(p \lor q) \land (p \to r) \land (q \to r)] \to r$
+          \end{enumerate}
+          \textbf{Answer:}
+          \begin{enumerate}[a.]
+              \item \begin{align*}
+                        [\neg p \land (p \lor q)] \to q
+                         & \equiv \neg[\neg p \land (p \lor q)] \lor q                         &  & \text{(Equivalence from table)}              \\
+                         & \equiv [\neg(\neg p) \lor \neg(p \lor q)] \lor q                    &  & \text{(De Morgan's Law)}                     \\
+                         & \equiv [p \lor (\neg p \land \neg q)] \lor q                        &  & \text{(Double negation and De Morgan's Law)} \\
+                         & \equiv [(p \lor \neg p) \land (p \lor \neg q)] \lor q               &  & \text{(Distibutive Law)}                     \\
+                         & \equiv [\mathbf{T} \land (p \lor \neg q)] \lor q                    &  & \text{(Negation Law)}                        \\
+                         & \equiv [(\mathbf{T} \land p) \lor (\mathbf{T} \land \neg q)] \lor q &  & \text{(Distributive Law)}                    \\
+                         & \equiv (p \lor \neg q) \lor q                                       &  & \text{(Identity Law)}                        \\
+                         & \equiv p \lor (\neg q \lor q)                                       &  & \text{(Associativity)}                       \\
+                         & \equiv p \lor \mathbf{T}                                            &  & \text{(Negation Law)}                        \\
+                         & \equiv \mathbf{T}                                                   &  & \text{(Domination Law)}                      \\
+                    \end{align*}
+              \item  \begin{align*}
+                        [(p \to q) \land (q \to r)] \to (p \to r)
+                        & \equiv 
+                    \end{align*}
+          \end{enumerate}
 
 \end{itemize}
