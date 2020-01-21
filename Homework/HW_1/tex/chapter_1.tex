@@ -158,7 +158,7 @@ its camera is 5 MP. Determine the truth value of each of these propositions.
               \item
                     \begin{tabular}{*{6}{|l} *{2}{|p{3.2cm}}|}
                         \hline
-                        \textit{p} & \textit{q} & \textit{r} & $p \lor q$ & $p \to r$ & $q \to r$ & $[(p \lor q) \land (p \to r) \land (q \to r) $ & $[(p \lor q) \land (p \to r) \land (q \to r)] \to r$
+                        \textit{p} & \textit{q} & \textit{r} & $p \lor q$ & $p \to r$ & $q \to r$ & $(p \lor q) \land (p \to r) \land (q \to r) $ & $[(p \lor q) \land (p \to r) \land (q \to r)] \to r$
                         \\
                         \hline
                         T          & T          & T          & T          & T         & T         & T                                              & T                                                    \\
@@ -194,7 +194,7 @@ its camera is 5 MP. Determine the truth value of each of these propositions.
                          & \equiv \neg[\neg p \land (p \lor q)] \lor q                         &  & \text{(Equivalence from table)}              \\
                          & \equiv [\neg(\neg p) \lor \neg(p \lor q)] \lor q                    &  & \text{(De Morgan's Law)}                     \\
                          & \equiv [p \lor (\neg p \land \neg q)] \lor q                        &  & \text{(Double negation and De Morgan's Law)} \\
-                         & \equiv [(p \lor \neg p) \land (p \lor \neg q)] \lor q               &  & \text{(Distibutive Law)}                     \\
+                         & \equiv [(p \lor \neg p) \land (p \lor \neg q)] \lor q               &  & \text{(Distributive Law)}                    \\
                          & \equiv [\mathbf{T} \land (p \lor \neg q)] \lor q                    &  & \text{(Negation Law)}                        \\
                          & \equiv [(\mathbf{T} \land p) \lor (\mathbf{T} \land \neg q)] \lor q &  & \text{(Distributive Law)}                    \\
                          & \equiv (p \lor \neg q) \lor q                                       &  & \text{(Identity Law)}                        \\
@@ -203,8 +203,48 @@ its camera is 5 MP. Determine the truth value of each of these propositions.
                          & \equiv \mathbf{T}                                                   &  & \text{(Domination Law)}                      \\
                     \end{align*}
               \item  \begin{align*}
-                        [(p \to q) \land (q \to r)] \to (p \to r)
-                        & \equiv 
+                        [(p \to  q)  \land  (q \to r)] \to (p \to r)
+                         & \equiv \neg [(p \to q) \land (q \to r)] \lor (p \to r)                                          &  & \text{(Equivalence from table)}         \\
+                         & \equiv [\neg (p \to q) \lor \neg (q \to r)] \lor (p \to r)                                      &  & \text{(De Morgan's Law)}                \\
+                         & \equiv [(p \land \neg q) \lor (q \land \neg r)] \lor (p \to r)                                  &  & \text{(Equivalence from table)}         \\
+                         & \equiv [(p \land \neg q) \lor (q \land \neg r)] \lor (\neg p \lor r)                            &  & \text{(Equivalence from table)}         \\
+                         & \equiv [(p \land \neg q) \lor (\neg p \lor r)] \lor (q \land \neg r)                            &  & \text{(Commutative \& Associative Law)} \\
+                         & \equiv [[(\neg p \lor r) \lor p] \land [(\neg p \lor r) \lor \neg q]] \lor (q \land \neg r)     &  & \text{(Distributive Law)}               \\
+                         & \equiv [[(p \lor \neg p) \lor r] \land [(\neg p \lor r) \lor \neg q]] \lor (q \land \neg r)     &  & \text{(Commutative \& Associative Law)} \\
+                         & \equiv [(\mathbf{T} \lor r) \land [(\neg p \lor r) \lor \neg q]] \lor (q \land \neg r)          &  & \text{(Negation Law)}                   \\
+                         & \equiv [\mathbf{T} \land [(\neg p \lor r) \lor \neg q]] \lor (q \land \neg r)                   &  & \text{(Domination Law)}                 \\
+                         & \equiv [(\neg p \lor r) \lor \neg q] \lor (q \land \neg r)                                      &  & \text{(Domination Law)}                 \\
+                         & \equiv [[(\neg p \lor r) \lor \neg q] \lor q] \land [[(\neg p \lor r) \lor \neg q] \lor \neg r] &  & \text{(Distributive Law)}               \\
+                         & \equiv [(\neg p \lor r) \lor (\neg q \lor q)] \land [(\neg p \lor \neg q) \lor (r \lor \neg r)] &  & \text{(Commutative \& Associative Law)} \\
+                         & \equiv [(neg p \lor r) \lor \mathbf{T}] \land [(\neg p \lor \neg q) \lor \mathbf{T}]            &  & \text{(Negation Law)}                   \\
+                         & \equiv \mathbf{T} \land \mathbf{T}                                                              &  & \text{Domination Law}                   \\
+                         & \equiv \mathbf{T}                                                                               &  & \text{(Identity Law)}
+                    \end{align*}
+              \item \begin{align*}
+                        [p \land (p \to q)] \to q
+                         & \equiv \neg [p \land (p \to q)] \lor q                     &  & \text{(Equivalence from table)} \\
+                         & \equiv [\neg p \lor \neg (p \to q)] \lor q                 &  & \text{(De Morgan’s Law)}        \\
+                         & \equiv [\neg p \lor (p \land \neg q)] \lor q               &  & \text{(Equivalence from table)} \\
+                         & \equiv [(\neg p \lor p) \land (\neg p \lor \neg q)] \lor q &  & \text{(Distributive Law)}       \\
+                         & \equiv [\mathbf{T} \land (\neg p \lor \neg q)] \lor q      &  & \text{(Negation Law)}           \\
+                         & \equiv (\neg p \lor \neg q) \lor q                         &  & \text{(Identity Law)}           \\
+                         & \equiv \neg p \lor (\neg q \lor q)                         &  & \text{(Associative Law)}        \\
+                         & \equiv \neg p \lor \mathbf{T}                              &  & \text{(Negation Law)}           \\
+                         & \equiv \mathbf{T}                                          &  & \text{(Domination Law)}
+                    \end{align*}
+              \item \begin{align*}
+                        [(p \lor q) \land (p \to r) \land (q \to r)] \to r
+                        & \equiv [(p \lor q) \land [(p \to r) \land (q \to r)]] \to r && \text{(Associative Law)} \\
+                        & \equiv [(p \lor q) \land [(p \lor q) \to r]] \to r && \text{(Equivalence from table)} \\ 
+                        & \equiv \neg [(p \lor q) \land [\neg (p \lor q) \lor r]] \lor r && \text{(Equivalence from table)} \\
+                        & \equiv [\neg (p \lor q) \lor \neg[\neg (p \lor q) \lor r]] \lor r && \text{(De Morgan’s Law)} \\
+                        & \equiv [\neg(p \lor q) \lor [(p \lor q) \land \neg r]] \lor r && \text{(De Morgan’s + Double Negation)} \\
+                        & \equiv [\neg(p \lor q) \lor (p \lor q) \land [\neg(p \lor q) \lor \neg r]] \lor r &&\text{(Distributive Law)} \\
+                        & \equiv [\mathbf{T} \land [\neg(p \lor q) \lor \neg r]] \lor r && \text{(Negation Law)} \\
+                        & \equiv [\neg(p \lor q) \lor \neg r] \lor r && \text{(Identity Law)} \\
+                        & \equiv \neg(p \lor q) \lor (\neg r \lor r) &&\text{(Associative Law)} \\
+                        & \equiv \neg(p \lor q) \lor \mathbf{T} && \text{(Negation Law)} \\
+                        & \equiv \mathbf{T}  && \text{(Domination Law)}
                     \end{align*}
           \end{enumerate}
 
