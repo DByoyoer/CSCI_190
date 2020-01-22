@@ -215,7 +215,7 @@ its camera is 5 MP. Determine the truth value of each of these propositions.
                          & \equiv [[(\neg p \lor r) \lor \neg q] \lor q] \land [[(\neg p \lor r) \lor \neg q] \lor \neg r] &  & \text{(Distributive Law)}       \\
                          & \equiv [(\neg p \lor r) \lor (\neg q \lor q)] \land [(\neg p \lor \neg q) \lor (r \lor \neg r)] &  & \text{(Commutative \&}          \\
                          &                                                                                                 &  & \text{Associative Law)}         \\
-                         & \equiv [(neg p \lor r) \lor \mathbf{T}] \land [(\neg p \lor \neg q) \lor \mathbf{T}]            &  & \text{(Negation Law)}           \\
+                         & \equiv [(\neg p \lor r) \lor \mathbf{T}] \land [(\neg p \lor \neg q) \lor \mathbf{T}]           &  & \text{(Negation Law)}           \\
                          & \equiv \mathbf{T} \land \mathbf{T}                                                              &  & \text{Domination Law}           \\
                          & \equiv \mathbf{T}                                                                               &  & \text{(Identity Law)}           \\
                     \end{align*}
@@ -409,11 +409,73 @@ quantifications in English.
               Let $x$ and $y$ be odd. This means that $x = 2k + 1$, $y = 2s + 1$; k, s $\in\mathbb{Z}$. \\
               Then:
               \begin{align*}
-                  x*y & = (2k + 1) * (2s+1) \\
-                      & = 4ks + 2k + 2s + 1 \\
-                      & = 2(2ks + k + s) + 1 \\
+                  x*y & = (2k + 1) \cdot (2s+1) \\
+                      & = 4ks + 2k + 2s + 1     \\
+                      & = 2(2ks + k + s) + 1    \\
                       & = 2r + 1
               \end{align*}
               Which is an odd number where $r = 2ks + k + s$.
+          \end{proof}
+
+    \item[18.] Prove that if n is an integer and 3n + 2 is even, then n is even using
+          \begin{enumerate}[a.]
+              \item a proof by contraposition.
+              \item a proof by contradiction.
+          \end{enumerate}
+          \begin{enumerate}[a.]
+              \item
+                    \begin{proof}
+                        Assume that n is odd, so n = 2k  + 1
+                        Then:
+                        \begin{align*}
+                            3n + 2 & = 3(2k + 1)  + 2 \\
+                                   & = 6k + 3 + 2     \\
+                                   & = 6k + 4 + 1     \\
+                                   & = 2(3k + 2) + 1  \\
+                                   & = 2r + 1
+                        \end{align*}
+                        Where $r \in \mathbb{Z}$\\
+                        So when n is odd then, 3n + 2 is odd is true, and the contrapositive that when 3n + 2 is even, then n is even is also true.
+                    \end{proof}
+
+              \item
+                    \begin{proof}
+                        Assume that $3n + 2$ is even and $n$ is odd. Because $n$ is odd there is an integer $k$ such that $n = 2k + 1$
+                        Then:
+                        \begin{align*}
+                            3n + 2 & = 3(2k + 1)  + 2 \\
+                                   & = 6k + 3 + 2     \\
+                                   & = 6k + 4 + 1     \\
+                                   & = 2(3k + 2) + 1  \\
+                                   & = 2r + 1         \\
+                        \end{align*}
+                        So $3n + 2 = 2r + 1$ where $r = 3k + 1$. Which shows $3n + 2$ is odd.
+                        We have 3n + 2 both even and odd which is a contradiction, which means our assumption that n is odd is false thus n is even.
+                    \end{proof}
+          \end{enumerate}
+    
+    \item[24.] Show that at least three of any 25 days chosen must fall in the same month of the year.
+          \begin{proof}
+            Assume that no more than 2 of any 25 days chosen must fall in the same month of the year.
+             Then because we have 12 months in a year at most 24 days can be chosen as each month can
+             have at most 2 days, however this contradicts the premise that there are 25 days chosen so at least 3 of any 25 days must fall in the same month of the year
+          \end{proof}
+    \item[28.] Prove that $m^2 = n^2$ if and only if $m = n$ or $m = -n$ 
+          \begin{proof}
+            ($\leftarrow$) WTS: $(m=n \lor m=-n) \to m^2=n^2$ \\
+            Let $m = n$ then $m^2 = m \cdot m = n \cdot n = n^2$ \\
+            Let $m = -n$, then $m^2 = m \cdot m = -n \cdot -n = n^2$\\
+            ($\to$) WTS: $m^2 = n^2 \to (m = n \lor m = -n)$\\ 
+            Assume $m \neq n \text{ and } m \neq -n$
+            \begin{align*}
+            m \neq n && \text{Premise}\\
+            m \cdot m \neq n \cdot m  &&\text{Multiply both sides by m}\\
+            m^2 \neq m \cdot n \neq n \cdot n \neq n^2 &&\text{True from premise}\\
+            m \neq -n\\
+            m \cdot m \neq m \neq -n\\
+            m^2 \neq m \cdot -n \neq -n \cdot -n \neq n^2 &&\text{Same steps as above}
+            \end{align*}
+            Contrapositive is true so the original statement is also true.\\
+            Have shown both implications is to so the biconditional is true.
           \end{proof}
 \end{itemize}
