@@ -114,8 +114,6 @@ its camera is 5 MP. Determine the truth value of each of these propositions.
                         F          & F          & T        & T          & T                           & T                                 \\
                         \hline
                     \end{tabular}
-                    \\
-                    \\
               \item
                     \begin{tabular}{|l|l|l|l|l|l|l|p{3cm}|}
                         \hline
@@ -138,8 +136,6 @@ its camera is 5 MP. Determine the truth value of each of these propositions.
                         F          & F          & F          & T         & T         & T         & T                             & T                                                    \\
                         \hline
                     \end{tabular}
-                    \\
-                    \\
               \item
                     \begin{tabular}{*{5}{|l}|}
                         \hline
@@ -161,21 +157,21 @@ its camera is 5 MP. Determine the truth value of each of these propositions.
                         \textit{p} & \textit{q} & \textit{r} & $p \lor q$ & $p \to r$ & $q \to r$ & $(p \lor q) \land (p \to r) \land (q \to r) $ & $[(p \lor q) \land (p \to r) \land (q \to r)] \to r$
                         \\
                         \hline
-                        T          & T          & T          & T          & T         & T         & T                                              & T                                                    \\
+                        T          & T          & T          & T          & T         & T         & T                                             & T                                                    \\
                         \hline
-                        T          & T          & F          & T          & F         & F         & F                                              & T                                                    \\
+                        T          & T          & F          & T          & F         & F         & F                                             & T                                                    \\
                         \hline
-                        T          & F          & T          & F          & T         & T         & T                                              & T                                                    \\
+                        T          & F          & T          & F          & T         & T         & T                                             & T                                                    \\
                         \hline
-                        T          & F          & F          & F          & T         & T         & F                                              & T                                                    \\
+                        T          & F          & F          & F          & T         & T         & F                                             & T                                                    \\
                         \hline
-                        F          & T          & T          & T          & T         & T         & T                                              & T                                                    \\
+                        F          & T          & T          & T          & T         & T         & T                                             & T                                                    \\
                         \hline
-                        F          & T          & F          & T          & F         & T         & F                                              & T                                                    \\
+                        F          & T          & F          & T          & F         & T         & F                                             & T                                                    \\
                         \hline
-                        F          & F          & T          & T          & T         & T         & T                                              & T                                                    \\
+                        F          & F          & T          & T          & T         & T         & T                                             & T                                                    \\
                         \hline
-                        F          & F          & F          & T          & T         & T         & T                                              & T                                                    \\
+                        F          & F          & F          & T          & T         & T         & T                                             & T                                                    \\
                         \hline
                     \end{tabular}
 
@@ -204,22 +200,26 @@ its camera is 5 MP. Determine the truth value of each of these propositions.
                     \end{align*}
               \item  \begin{align*}
                         [(p \to  q)  \land  (q \to r)] \to (p \to r)
-                         & \equiv \neg [(p \to q) \land (q \to r)] \lor (p \to r)                                          &  & \text{(Equivalence from table)}         \\
-                         & \equiv [\neg (p \to q) \lor \neg (q \to r)] \lor (p \to r)                                      &  & \text{(De Morgan's Law)}                \\
-                         & \equiv [(p \land \neg q) \lor (q \land \neg r)] \lor (p \to r)                                  &  & \text{(Equivalence from table)}         \\
-                         & \equiv [(p \land \neg q) \lor (q \land \neg r)] \lor (\neg p \lor r)                            &  & \text{(Equivalence from table)}         \\
-                         & \equiv [(p \land \neg q) \lor (\neg p \lor r)] \lor (q \land \neg r)                            &  & \text{(Commutative \& Associative Law)} \\
-                         & \equiv [[(\neg p \lor r) \lor p] \land [(\neg p \lor r) \lor \neg q]] \lor (q \land \neg r)     &  & \text{(Distributive Law)}               \\
-                         & \equiv [[(p \lor \neg p) \lor r] \land [(\neg p \lor r) \lor \neg q]] \lor (q \land \neg r)     &  & \text{(Commutative \& Associative Law)} \\
-                         & \equiv [(\mathbf{T} \lor r) \land [(\neg p \lor r) \lor \neg q]] \lor (q \land \neg r)          &  & \text{(Negation Law)}                   \\
-                         & \equiv [\mathbf{T} \land [(\neg p \lor r) \lor \neg q]] \lor (q \land \neg r)                   &  & \text{(Domination Law)}                 \\
-                         & \equiv [(\neg p \lor r) \lor \neg q] \lor (q \land \neg r)                                      &  & \text{(Domination Law)}                 \\
-                         & \equiv [[(\neg p \lor r) \lor \neg q] \lor q] \land [[(\neg p \lor r) \lor \neg q] \lor \neg r] &  & \text{(Distributive Law)}               \\
-                         & \equiv [(\neg p \lor r) \lor (\neg q \lor q)] \land [(\neg p \lor \neg q) \lor (r \lor \neg r)] &  & \text{(Commutative \& Associative Law)} \\
-                         & \equiv [(neg p \lor r) \lor \mathbf{T}] \land [(\neg p \lor \neg q) \lor \mathbf{T}]            &  & \text{(Negation Law)}                   \\
-                         & \equiv \mathbf{T} \land \mathbf{T}                                                              &  & \text{Domination Law}                   \\
-                         & \equiv \mathbf{T}                                                                               &  & \text{(Identity Law)}
+                         & \equiv \neg [(p \to q) \land (q \to r)] \lor (p \to r)                                          &  & \text{(Equivalence from table)} \\
+                         & \equiv [\neg (p \to q) \lor \neg (q \to r)] \lor (p \to r)                                      &  & \text{(De Morgan's Law)}        \\
+                         & \equiv [(p \land \neg q) \lor (q \land \neg r)] \lor (p \to r)                                  &  & \text{(Equivalence from table)} \\
+                         & \equiv [(p \land \neg q) \lor (q \land \neg r)] \lor (\neg p \lor r)                            &  & \text{(Equivalence from table)} \\
+                         & \equiv [(p \land \neg q) \lor (\neg p \lor r)] \lor (q \land \neg r)                            &  & \text{(Commutative \&}          \\
+                         &                                                                                                 &  & \text{Associative Law)}         \\
+                         & \equiv [[(\neg p \lor r) \lor p] \land [(\neg p \lor r) \lor \neg q]] \lor (q \land \neg r)     &  & \text{(Distributive Law)}       \\
+                         & \equiv [[(p \lor \neg p) \lor r] \land [(\neg p \lor r) \lor \neg q]] \lor (q \land \neg r)     &  & \text{(Commutative \&}          \\
+                         &                                                                                                 &  & \text{Associative Law)}         \\
+                         & \equiv [(\mathbf{T} \lor r) \land [(\neg p \lor r) \lor \neg q]] \lor (q \land \neg r)          &  & \text{(Negation Law)}           \\
+                         & \equiv [\mathbf{T} \land [(\neg p \lor r) \lor \neg q]] \lor (q \land \neg r)                   &  & \text{(Domination Law)}         \\
+                         & \equiv [(\neg p \lor r) \lor \neg q] \lor (q \land \neg r)                                      &  & \text{(Domination Law)}         \\
+                         & \equiv [[(\neg p \lor r) \lor \neg q] \lor q] \land [[(\neg p \lor r) \lor \neg q] \lor \neg r] &  & \text{(Distributive Law)}       \\
+                         & \equiv [(\neg p \lor r) \lor (\neg q \lor q)] \land [(\neg p \lor \neg q) \lor (r \lor \neg r)] &  & \text{(Commutative \&}          \\
+                         &                                                                                                 &  & \text{Associative Law)}         \\
+                         & \equiv [(neg p \lor r) \lor \mathbf{T}] \land [(\neg p \lor \neg q) \lor \mathbf{T}]            &  & \text{(Negation Law)}           \\
+                         & \equiv \mathbf{T} \land \mathbf{T}                                                              &  & \text{Domination Law}           \\
+                         & \equiv \mathbf{T}                                                                               &  & \text{(Identity Law)}           \\
                     \end{align*}
+
               \item \begin{align*}
                         [p \land (p \to q)] \to q
                          & \equiv \neg [p \land (p \to q)] \lor q                     &  & \text{(Equivalence from table)} \\
@@ -234,18 +234,186 @@ its camera is 5 MP. Determine the truth value of each of these propositions.
                     \end{align*}
               \item \begin{align*}
                         [(p \lor q) \land (p \to r) \land (q \to r)] \to r
-                        & \equiv [(p \lor q) \land [(p \to r) \land (q \to r)]] \to r && \text{(Associative Law)} \\
-                        & \equiv [(p \lor q) \land [(p \lor q) \to r]] \to r && \text{(Equivalence from table)} \\ 
-                        & \equiv \neg [(p \lor q) \land [\neg (p \lor q) \lor r]] \lor r && \text{(Equivalence from table)} \\
-                        & \equiv [\neg (p \lor q) \lor \neg[\neg (p \lor q) \lor r]] \lor r && \text{(De Morgan’s Law)} \\
-                        & \equiv [\neg(p \lor q) \lor [(p \lor q) \land \neg r]] \lor r && \text{(De Morgan’s + Double Negation)} \\
-                        & \equiv [\neg(p \lor q) \lor (p \lor q) \land [\neg(p \lor q) \lor \neg r]] \lor r &&\text{(Distributive Law)} \\
-                        & \equiv [\mathbf{T} \land [\neg(p \lor q) \lor \neg r]] \lor r && \text{(Negation Law)} \\
-                        & \equiv [\neg(p \lor q) \lor \neg r] \lor r && \text{(Identity Law)} \\
-                        & \equiv \neg(p \lor q) \lor (\neg r \lor r) &&\text{(Associative Law)} \\
-                        & \equiv \neg(p \lor q) \lor \mathbf{T} && \text{(Negation Law)} \\
-                        & \equiv \mathbf{T}  && \text{(Domination Law)}
+                         & \equiv [(p \lor q) \land [(p \to r) \land (q \to r)]] \to r                       &  & \text{(Associative Law)}               \\
+                         & \equiv [(p \lor q) \land [(p \lor q) \to r]] \to r                                &  & \text{(Equivalence from table)}        \\
+                         & \equiv \neg [(p \lor q) \land [\neg (p \lor q) \lor r]] \lor r                    &  & \text{(Equivalence from table)}        \\
+                         & \equiv [\neg (p \lor q) \lor \neg[\neg (p \lor q) \lor r]] \lor r                 &  & \text{(De Morgan’s Law)}               \\
+                         & \equiv [\neg(p \lor q) \lor [(p \lor q) \land \neg r]] \lor r                     &  & \text{(De Morgan’s + Double Negation)} \\
+                         & \equiv [\neg(p \lor q) \lor (p \lor q) \land [\neg(p \lor q) \lor \neg r]] \lor r &  & \text{(Distributive Law)}              \\
+                         & \equiv [\mathbf{T} \land [\neg(p \lor q) \lor \neg r]] \lor r                     &  & \text{(Negation Law)}                  \\
+                         & \equiv [\neg(p \lor q) \lor \neg r] \lor r                                        &  & \text{(Identity Law)}                  \\
+                         & \equiv \neg(p \lor q) \lor (\neg r \lor r)                                        &  & \text{(Associative Law)}               \\
+                         & \equiv \neg(p \lor q) \lor \mathbf{T}                                             &  & \text{(Negation Law)}                  \\
+                         & \equiv \mathbf{T}                                                                 &  & \text{(Domination Law)}
                     \end{align*}
           \end{enumerate}
+\end{itemize}
 
+\subsection{1.4}
+\begin{itemize}
+\item[6.] Let N (x) be the statement “x has visited North Dakota,” where
+the domain consists of the students in your school. Express each of these
+quantifications in English.
+\begin{enumerate}[a.]
+\item $\exists xN(x)$
+\item $\forall xN(x)$
+\item $\neg\exists xN(x)$
+\item $\exists x \neg N(x)$
+\item $\neg\forall xN(x)$
+\item $\forall x \neg N(x)$
+\end {enumerate}
+\textbf{Answer:}
+\begin{enumerate}[a.]
+    \item There exists a student in my school who has visited North Dakota.
+    \item Every student in my school has visted North Dakota.
+    \item No student in my school has visted North Dakota.
+    \item At least one student in my school has not visted North Dakota.
+    \item At least one student in my school has not visted North Dakota.
+    \item No student in my school has visted North Dakota.
+\end{enumerate}
+\item[8.] Translate these statements into English, where R(x) is “x is a rabbit” and H (x) is “x hops” and the domain consists of all animals.
+\begin {enumerate}[a.]
+\item $\forall x(R(x) \to H(x))$
+\item $\forall x(R(x) \land H(x))$
+\item $\exists x(R(x) \to H(x))$
+\item $\exists x(R(x) \land H(x))$
+\end{enumerate}
+\textbf{Answer:}
+\begin{enumerate}[a.]
+    \item Every rabbit hops.
+    \item All animals are rabbits who hop.
+    \item There exists an animal that if they are a rabbit, then they hop.
+    \item Some rabbits hop.
+\end{enumerate}
+\item[14.] Determine the truth value of each of these statements if the domain consists of all real numbers.
+\begin{enumerate}[a.]
+    \item $\exists x(x^3 = -1)$
+    \item $\exists x(x^4 < x^2)$
+    \item $\forall x((-x)^2 = x^2)$
+    \item $\forall x(2x > x)$
+\end{enumerate}
+\begin{enumerate}[a.]
+    \item True, x = -1
+    \item True, x = 0.1
+    \item True, squaring returns a positive result
+    \item False, x = -1 returns false.
+\end{enumerate}
+\end{itemize}
+
+\subsection{1.5}
+\begin{itemize}
+    \item[2.] Translate these statements into English, where the domain for each
+          variable consists of all real numbers.
+          \begin{enumerate}[a.]
+              \item $\exists x \forall y (xy = y)$
+              \item $\forall x \forall y ((((x \geq 0) \land y < 0)) \to (x - y > 0)$
+              \item $\forall x \forall y \exists z (x = y + z)$
+          \end{enumerate}
+          \textbf{Answer:}
+          \begin{enumerate}[a.]
+              \item There exists an $x$ such that for all $y$, $xy = y$, $x$ and $y$ are real.
+              \item For all pairs of $x$ and $y$, both real, if $(x \geq 0)$ and $(y < 0)$, then $x - y > 0$.
+              \item Let $x$, $y$ and $z$ be real numbers; for all pairs $x$ and $y$ there exists a $z$ such that $x = y + z$.
+          \end{enumerate}
+
+    \item[6.] Let C(x, y) mean that student x is enrolled in class y,
+          where the domain for x consists of all students in your school and
+          the domain for y consists of all classes being given at your school.
+          Express each of these statements by a simple English sentence.
+          \begin{enumerate}[a.]
+              \item $C(\text{Randy Goldberg}, \text{CS } 252)$
+              \item $\exists xC(x, \text{Math } 695)$
+              \item $\exists yC(\text{Carol Sitea}, y)$
+              \item $\exists x(C(x, \text{Math } 222) \land C(x, \text{CS } 252))$
+              \item $\exists x \exists y \forall z ((x = y) \land (C(x, z) \to C(y, z)))$
+              \item $\exists x \exists y \forall z ((x = y) \land (C(x, z) \leftrightarrow C(y, z)))$
+          \end{enumerate}
+          \textbf{Answer:}
+          \begin{enumerate}[a.]
+              \item Randy Goldberg is enrolled in CS 252.
+              \item There exists a student in my school that is enrolled in Math 695.
+              \item Carol Sitea is taking some class at my school.
+              \item There exists a student who is enrolled in Math 22 and CS 252.
+                    %TODO: Answer e and f
+          \end{enumerate}
+    \item[10.] Let $F(x, y)$ be the statement “x can fool y,” where the domain consists of
+          all people in the world. Use quantifiers to express each of these statements.
+          \begin{enumerate}[a.]
+              \item Everybody can fool Fred.
+              \item Evelyn can fool everybody.
+              \item Everybody can fool somebody.
+              \item There is no one who can fool everybody.
+              \item Everyone can be fooled by somebody.
+              \item No one can fool both Fred and Jerry.
+              \item Nancy can fool exactly two people.
+              \item There is exactly one person whom everybody can fool.
+              \item No one can fool himself or herself.
+              \item There is someone who can fool exactly one person besides himself or herself.
+          \end{enumerate}
+          \textbf{Answer:}
+          \begin{enumerate}[a.]
+              \item $\forall xF(x, \text{Fred})$
+              \item $\forall xF(\text{Evelyn}, x)$
+              \item $\forall x \exists yF(x,y)$
+              \item $\forall x \exists y \neg F(x,y)$
+              \item $\forall x \exists y F(y, x)$
+              \item $\forall x(\neg F(x, \text{Fred}) \lor \neg F(x, \text{Jerry}))$
+              \item $\exists x \exists y (x \neq y \land F(\text{Nancy}, x) \land F(\text{Nancy}, y))$
+              \item $\exists x \forall y (F(y, x) \land \forall zF(F(y,z) \to z = x))$
+              \item $\forall x \neg F(x, x)$
+              \item $\exists x \exists y (x \neq y \land F(x, y) \land \forall zF(x,z) \to z = y)$
+          \end{enumerate}
+\end{itemize}
+
+\subsection{1.6}
+\begin{itemize}
+    \item[2.] Find the argument form for the following argument and determine whether it is valid. Can we conclude that the conclusion is true if the premises are true?
+          \vspace{5mm} %Need the separation or else shit goes weird
+
+          \begin{tabular}{rl}
+                           & If George does not have eight legs, then he is not a spider. \\
+                           & George is a spider                                           \\
+              \hline
+              $\therefore$ & George has eight legs \vspace{3mm}                           %Need to find out why it has to go here
+          \end{tabular}
+
+          \textbf{Answer: }
+          Yes the conclusion is true because of modus tollens.
+
+    \item[4.] What rule of inference is used in each of these arguments?
+          \begin{enumerate}[a.]
+              \item Kangaroos live in Australia and are marsupials. Therefore, kangaroos are marsupials.
+              \item It is either hotter than 100 degrees today or the pollution is dangerous. It is less than 100 degrees outside today. Therefore, the pollution is dangerous.
+              \item Linda is an excellent swimmer. If Linda is an excellent swimmer, then she can work as a lifeguard. Therefore, Linda can work as a lifeguard.
+              \item Steve will work at a computer company this summer. Therefore, this summer Steve will work at a computer company or he will be a beach bum.
+              \item If I work all night on this homework, then I can answer all the exercises. If I answer all the exercises, I will understand the material. Therefore, if I work all night on this homework, then I will understand the material.
+          \end{enumerate}
+          \textbf{Answer:}
+          \begin{enumerate}[a.]
+              \item Simplification
+              \item Disjunctive syllogism
+              \item Modus ponens
+              \item Addition
+              \item Hypothetical syllogism
+          \end{enumerate}
+
+    \item[8] What rules of inference are used in this argument? “No man is an island. Manhattan is an island. Therefore, Manhattan is not a man.”
+
+          \textbf{Answer:} Modus ponens
+\end{itemize}
+
+\subsection{1.7}
+\begin{itemize}
+    \item[6.] Use a direct proof to show that the product of two odd numbers is odd.
+          \begin{proof}
+              Let $x$ and $y$ be odd. This means that $x = 2k + 1$, $y = 2s + 1$; k, s $\in\mathbb{Z}$. \\
+              Then:
+              \begin{align*}
+                  x*y & = (2k + 1) * (2s+1) \\
+                      & = 4ks + 2k + 2s + 1 \\
+                      & = 2(2ks + k + s) + 1 \\
+                      & = 2r + 1
+              \end{align*}
+              Which is an odd number where $r = 2ks + k + s$.
+          \end{proof}
 \end{itemize}
