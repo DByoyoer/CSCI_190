@@ -1,0 +1,144 @@
+\section{Chapter 5}
+\subsection{5.1}
+\begin{itemize}
+    \item [4.] Let $P(n)$ be the statement that $1^3 + 2^3 +\ldots + n^3 = (n(n + 1)/2)^2$ for the positive integer $n$.
+          \begin{enumerate}[a.]
+              \item What is the statement P (1)?
+              \item Show that P (1) is true, completing the basis step of the proof.
+              \item What is the inductive hypothesis?
+              \item What do you need to prove in the inductive step?
+              \item Complete the inductive step, identifying where you use the inductive hypothesis.
+              \item Explain why these steps show that this formula is true whenever n is a positive integer.
+          \end{enumerate}
+          \answer
+          \begin{enumerate}[a.]
+              \item $P(1):1^3 = 1(1(1+1)/2)^2$
+              \item $(1(1+1)/2)^2 = (2/2)^2 = 1 = 1^3 = 1$
+              \item Inductive Hypothesis: $ 1^3 + 2^3 + \ldots + k^3 = (k(k+1)/2)^2$
+              \item Need to prove that $P(k) \to P(k+1)$ for $k \geq 1$
+              \item
+                    \begin{align*}
+                        \sum_{n=1}^{k+1} i^3 & = \sum_{n=1}^{k} i^3 + (k+1)^3                                                    \\
+                                             & = \left(\frac{k(k+1)}{2}\right)^2 + (k+1)^3           &  & (Inductive Hypothesis) \\
+                                             & =\frac{k^4 + 2k^3 + k^2}{4}+ \frac{4(k+1)^3}{4}                                   \\
+                                             & = \frac{k^4 + 2k^3 + k^2 + 4(k+1)^3}{4}                                           \\
+                                             & = \frac{k^4 + 2k^3 + k^2 + 4(k^3 + 3k^2 + 3k + 1)}{4}                             \\
+                                             & = \frac{k^3 + 2k^3 + k^2 + 4k^3 + 12k^2 + 12k + 4}{4}                             \\
+                                             & = \frac{k^4 + 6k^3 + 13k^2 + 12k + 4}{4}                                          \\
+                                             & = \frac{(k^2+3k+2)(k^2+3k+2)}{4}                                                  \\
+                                             & = \frac{(k^2+3k+2)^2}{2^2}                                                        \\
+                                             & = \frac{((k+1)(k+2))^2}{2^2}                                                      \\
+                                             & = \left(\frac{(k+1)(k+2)}{2}\right)^2                                             \\
+                                             & = \left(\frac{(k+1)((k+1)+1)}{2}\right)^2
+                    \end{align*}
+              \item Completed the base and inductive step, so by the principle of mathematical induction the statement is true for all positive integer $n$.
+          \end{enumerate}
+
+    \item[6.]  Prove that $1 \cdot 1! + 2 \cdot 2! + \ldots + n \cdot n! = (n + 1)! - 1$ whenever n is a positive integer. \\
+          \answer
+          \begin{proof}
+              (Base Case) If $n=1$ then the left side is $1 \cdot 1! = 1$ and the left side is $(2)! - 1=1$ so the formula holds for n = 1.\\
+              (Inductive Hypothesis) Assume that for $k \geq 1$ that the formula is true, that is $1 \cdot 1! + 2 \cdot 2! + \ldots + k \cdot k! = (k + 1)! - 1$. \\
+              (Inductive Step) Let $n = k + 1$ Then:
+              \begin{align*}
+                  \sum_{n=1}^{k+1} i \cdot i! & = (k+1)(k+1)! + \sum_{n=1}^{k} i \cdot i!                                       \\
+                                              & = (k+1)(k+1)! + (k+1)! -1                 &  & \text{(By inductive hypothesis)} \\
+                                              & = (k+2)(k+1)! -1                                                                \\
+                                              & = (k+2)! - 1
+              \end{align*}
+              This is the right side that we want so it holds for n = k +1. Thus by the principle of mathematical induction the theorem holds for all $n \in \mathbb{N}$.
+          \end{proof}
+\end{itemize}
+
+
+\subsection{5.2}
+\begin{itemize}
+    \item[2.]  Use strong induction to show that all dominoes fall in an infinite arrangement of dominoes if you know that the
+          first three dominoes fall, and that when a domino falls,
+          the domino three farther down in the arrangement also
+          falls. \\
+          \answer
+          \begin{proof}
+              Since we know that the first dominoes will fall we will assume that the
+              first $k$ dominoes will fall. If $k \leq 3$ then we already know that those
+              will fall from what's given. We know that the $k - 2$ will fall by the inductive
+              hypothesis. This means that the $(k -2) + 3 = k+1$ domino will fall. We have
+              shown that if the $k^{th}$ domino falls then the $k +1$ domino will fall and Thus
+              the statement is true by the principle of strong induction.
+          \end{proof}
+    \item[4.] Let $P(n)$ be the statement that a postage of n cents can be
+          formed using just 4-cent stamps and 7-cent stamps. The
+          parts of this exercise outline a strong induction proof that
+          $P(n)$ is true for $n \geq  18$.
+          \begin{enumerate}[a.]
+              \item Show statements $P(18)$, $P(19)$, $P(20)$, and $P(21)$ are true, completing the basis step of the proof.
+              \item What is the inductive hypothesis of the proof?
+              \item What do you need to prove in the inductive step?
+              \item Complete the inductive step for $k \geq 21$.
+              \item Explain why these steps show that this statement is true whenever $n \geq 18$.
+          \end{enumerate}
+          \answer
+          \begin{enumerate}[a.]
+              \item $P(18)$ is true because you can use two 7-cent stamps and a 4-cent stamp\\
+                    $P(19)$ is true with three 4-cent stamps and a 7-cent stamp.\\
+                    $P(20)$ is true with five 4-cent stamps. \\
+                    $P(21)$ is true with three 7-cent stamps.
+              \item Inductive Hypothesis: Assume that $P(j)$ is true with $18 \leq j \leq k$ with $k \geq 21$
+              \item Need to prove that if $P(k)$ is true then $P(k+1)$ is also true with $k \geq 18$
+              \item If $k \geq 21$ we know that $P(k-3)$ is true since $k-3 \geq 18$ by the inductive hypothesis
+                    This means that $P(k+1)$ is true because we can add a 4-cent coin to the combination from $P(k-3)$.
+              \item  Completed basis step and inductive step so it is true for all integers greater than 18.
+          \end{enumerate}
+
+\end{itemize}
+\subsection{5.3}
+\begin{itemize}
+    \item[2.]  Find $f(1)$, $f(2)$, $f(3)$, $f(4)$, and $f(5)$ if f (n) is defined
+          recursively by $f(0) = 3$ and for $n = 0, 1, 2, \ldots$
+          \begin{enumerate}[a.]
+              \item $f (n + 1) = -2f (n)$.
+              \item $f (n + 1) = 3f (n) + 7$.
+              \item $f (n + 1) = f (n)^2 - 2f (n) - 2$.
+              \item $f (n + 1) = 3^{f(n)/3}$.
+          \end{enumerate}
+          \answer
+          \begin{enumerate}[a.]
+              \item $f(1)=-6, \ f(2)=12, \ f(3) -24, \ f(4) = 48, \ f(5) = -96$
+              \item $f(1)=16, \ f(2)=55, \ f(3)= 172 , \ f(4) = 523, \ f(5) = 1576$
+              \item $f(1)=1,  \ f(2)=-3, \ f(3)= 13, \ f(4) = 141, \ f(5) = 19597$
+              \item $f(1)=3,  \ f(2)=3, \ f(3) =3, \ f(4) = 3, \ f(5) = 3$
+          \end{enumerate}
+    \item[4.]  Find $f(2),\ f (3),\ f (4),\ \text{and } f (5)$ if $f$ is defined recursively by $f (0) = f (1) = 1$ and for $n = 1,\ 2,\ \ldots$
+          \begin{enumerate}[a.]
+              \item $f (n + 1) = f (n) - f (n - 1)$.
+              \item $f (n + 1) = f (n)f (n - 1)$.
+              \item $f (n + 1) = f (n)^2 + f (n - 1)^3 $.
+              \item $f (n + 1) = f (n)/f (n - 1)$.
+          \end{enumerate}
+          \answer
+          \begin{enumerate}
+              \item $f(2)=0, \ f(3) -1, \ f(4) = -1, \ f(5) = 0$
+              \item $f(2)=1, \ f(3) 1, \ f(4) = 1, \ f(5) = 1$
+              \item $f(2)=2, \ f(3) 5, \ f(4) = 33, \ f(5) = 1214$
+              \item $f(2)=1, \ f(3) 1, \ f(4) = 1, \ f(5) = 1$
+          \end{enumerate}
+    \item[8.]  Give a recursive definition of the sequence $\{a_n \},\ n = 1,\ 2,\ 3,\ \ldots\ $if
+          \begin{enumerate}[a.]
+              \item$a_n = 4n - 2.$
+              \item$a_n = 1 + (-1)^n $.
+              \item$a_n = n(n + 1)$.
+              \item$a_n = n^2 $.
+          \end{enumerate}
+          \answer
+          \begin{enumerate}[a.]
+              \item $f(1) =2 \\ f(n+1) = f(n) +4$
+              \item $f(1)=1\\f(n+1) = f(n) + (-1)^{f(n)}$
+              \item $f(1) =2,\ f(2) = 6 \\ f(n+1) = 2f(n) -f(n-1) +2$
+              \item $f(1) =1,\ f(2) = 4 \\ f(n+1) = 2f(n) -f(n-1) +2$
+          \end{enumerate}
+
+
+\end{itemize}
+
+\subsection{5.4}
+%TODO: 5.4 – 2, 8
