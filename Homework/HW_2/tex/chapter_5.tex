@@ -141,4 +141,25 @@
 \end{itemize}
 
 \subsection{5.4}
-%TODO: 5.4 – 2, 8
+\begin{itemize}
+    \item[2.] Trace Algorithm 1 when it is given $n = 6$ as input. That
+is, show all steps used by Algorithm 1 to find $6!$, as is
+done in Example 1 to find $4!$. 
+
+\answer 
+
+$6! = 6 \cdot 5!, \ 5! = 5 \cdot 4!, \ 4! = 4 \cdot 3!, \ 3! = 3 \cdot 2!, \ 2! = 2 \cdot 1!, \ 1! = 1 \cdot 0!$\\
+$0! = 1$ So $1! = 1 \cdot 1 = 1, \ 2! = 2 \cdot 1! = 2, \ 3! = 3 \cdot 2! = 6, \ 4! = 4 \cdot 3! = 24, \ 5! = 5 \cdot 4! = 120 \ 6! = 6 \cdot 5! = 720$
+
+\item[8.]  Give a recursive algorithm for finding the sum of the
+first $n$ positive integers.
+
+\answer
+
+\textbf{procedure:} \textit{sum\_to\_n}($n$: nonnegative integer)\\
+\textbf{if} n = 0 \textbf{then return} 0\\
+\textbf{else return} $n+$ \textit{sum\_to\_n}($n-1$)
+
+
+
+\end{itemize}
