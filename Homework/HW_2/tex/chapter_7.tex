@@ -1,1 +1,91 @@
 \section{Chapter 7}
+\subsection{7.1}
+%TODO: 7.1 – 2, 8, 30, 40
+\begin{itemize}
+    \item[2.]  What is the probability that a fair die comes up six when
+          it is rolled? \\
+          \answer \\
+          $1/6$
+
+    \item[8.]  What is the probability that a five-card poker hand contains the ace of hearts? \\
+          \answer \\
+          In any group of 5 cards each card has a 1/52 chance of being the ace of hearts, so for
+          a group of 5 there is $5 \cdot 1/52 = 5/52$ chance of there being an ace of hearts in
+          that group.
+
+    \item[30.] What is the probability that a player of a lottery wins
+          the prize offered for correctly choosing five (but not six)
+          numbers out of six integers chosen at random from the
+          integers between 1 and 40, inclusive? \\
+          \answer \\
+          We know that there is $40 \choose 6$ choices for the 6 numbers. Then we have
+          to choose 5 correct numbers out of 6. Then finally there is 34 numbers that we
+          can choose that are not the correct one. So the answer is ${6 \choose 5} \cdot 34 / {40 \choose 6} = 5.31 \cdot 10^{-5}$
+
+    \item[40.] Suppose that instead of three doors, there are four doors
+          in the Monty Hall puzzle. What is the probability that you
+          win by not changing once the host, who knows what is
+          behind each door, opens a losing door and gives you the
+          chance to change doors? What is the probability that you
+          win by changing the door you select to one of the two
+          remaining doors among the three that you did not select? \\
+          \answer \\
+          Not changing doors : 0.25 \\
+          Changing doors : 3/8 = 0.375
+
+\end{itemize}
+
+\subsection{7.2}
+\begin{itemize}
+    %! ALERT: CHECK THIS TONIGHT BEFORE TURNING IN
+    \item[2.]  Find the probability of each outcome when a loaded die
+          is rolled, if a 3 is twice as likely to appear as each of the
+          other five numbers on the die. \\
+          \answer \\
+          P(3) = 2/5 and the rest is 1/15 each.
+
+    \item[6.]  What is the probability of these events when we randomly
+          select a permutation of {1, 2, 3}?
+          \begin{enumerate}[a.]
+              \item 1 precedes 3.
+              \item 3 precedes 1.
+              \item 3 precedes 1 and 3 precedes 2.
+          \end{enumerate}
+          \answer \\
+          Permutations: 123, 132, 213, 231, 312, 321
+          \begin{enumerate}[a.]
+              \item 1/2
+              \item 1/2
+              \item 1/3
+          \end{enumerate}
+    \item[12.] Suppose that $E$ and $F$ are events such that $p(E) =
+              0.8 \text{ and } p(F) = 0.6$. Show that $p(E \cup F ) \geq 0.8$ and
+          $p(E \cap F) \geq 0.4.$ \\
+          \answer \\
+          $p(E \cup F) = p(E) + p(F) - p(E \cap F) = 1.4 - p(E \cap F)$ \\
+          But since the probability of an event can't be greater than 1 we know that
+          $p(E \cap F) \geq  0.4$ \\
+          Now to find the min of $p(E \cup F)$ we need to find the max of $p(E \cap F)$
+          it can't be higher than the probability of either of the events probability so
+          it can't be greater than 0.6. So with the previous formula $p(E \cup F) = 1.4 -0.6 = 0.8$
+          as the min. So $p(E \cup F) \geq 0.8$.
+
+    \item[24.] What is the conditional probability that exactly four heads
+          appear when a fair coin is flipped five times, given that
+          the first flip came up tails? \\
+          \answer \\
+          $p(E | F) = p(E \cap F) / p(F)$\\
+          Let $F$ be first flip is tails then $p(F) = 1/2$ \\
+          $p(E \cap F) = 1/2^5$ since there is only 1 sequence of flips that is 1 tails
+          out of $2^5$ combinations. So $p(E|F) = (1/32)/(1/2)= 1/16$
+
+    \item[26.]  Let E be the event that a randomly generated bit string
+          of length three contains an odd number of 1s, and let F
+          be the event that the string starts with 1. Are E and F
+          independent? \\
+          \answer \\
+          $p(E) = \left({3 \choose 1} + {3 \choose 3}\right) /2^3 = 1/2$ \\
+          $p(F) = 2^2/2^3 = 1/2$ \\
+          $p(E \cap F) = 2/8 = 1/4 = p(E) \cdot p(F)$ \\
+          Thus E and F are independent.
+\end{itemize}
