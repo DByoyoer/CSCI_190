@@ -87,10 +87,177 @@ determine the type of graph in Table 1 this graph is.
 \end{itemize}
 
 \subsection{10.3}
-%TODO: 10.3 – 2, 4, 6, 8, 12, 14, 26, 38, 42
+For 2 and 4 use an adjacency list to represent the given graph.
+\begin{itemize}
+      \item[2.] \text{}\\
+            \includegraphics[scale = 0.7]{img/10_3_2_graph.png} \\
+            \answer \vspace{1mm} \\
+            \begin{tabular}{c|l}
+                  Vertex     & Adjacent Vertices \\
+                  \hline
+                  \textit{a} & \textit{b, d}     \\
+                  \textit{b} & \textit{a, d, e}  \\
+                  \textit{c} & \textit{d, e}     \\
+                  \textit{d} & \textit{a, b, c}  \\
+                  \textit{e} & \textit{b, c}
+            \end{tabular}
+
+      \item[4.] \text{}\\
+            \includegraphics[scale = 0.7]{img/10_3_4_graph.png} \\
+            \answer \vspace{1mm}\\
+            \begin{tabular}{c|l}
+                  Vertex     & Adjacent Vertices   \\
+                  \hline
+                  \textit{a} & \textit{b, d}       \\
+                  \textit{b} & \textit{a, c, d, e} \\
+                  \textit{c} & \textit{b, c}       \\
+                  \textit{d} & \textit{a, e}       \\
+                  \textit{e} & \textit{c, e}
+            \end{tabular}
+
+      \item[6.]  Represent the graph in Exercise 2 with an adjacency matrix. \\
+            \answer \vspace{1mm} \\
+            $
+                  \begin{bmatrix}
+                        0 & 1 & 0 & 1 & 0 \\
+                        1 & 0 & 0 & 1 & 1 \\
+                        0 & 0 & 0 & 1 & 1 \\
+                        1 & 1 & 1 & 0 & 0 \\
+                        0 & 1 & 1 & 0 & 0
+                  \end{bmatrix}
+            $
+
+      \item[8.] Represent the graph in Exercise 4 with an adjacency matrix. \\
+            \answer \vspace{1mm} \\
+            $
+                  \begin{bmatrix}
+                        0 & 1 & 0 & 1 & 0 \\
+                        1 & 0 & 1 & 1 & 1 \\
+                        0 & 1 & 1 & 0 & 0 \\
+                        1 & 0 & 0 & 0 & 1 \\
+                        0 & 0 & 1 & 0 & 1
+                  \end{bmatrix}
+            $
+
+      \item[12.] Draw a graph with the given adjacency matrix. \\
+            \answer \\
+            \includegraphics[scale = 0.7]{img/10_3_12_graph.png}
+
+      \item[14.] Represent given graph with an adjacency matrix. \\
+            \includegraphics[scale = 0.7]{img/10_3_14_graph.png}\\
+            \answer \vspace{1.5mm} \\
+            $
+                  \begin{bmatrix}
+                        0 & 3 & 0 & 1 \\
+                        3 & 0 & 1 & 0 \\
+                        0 & 1 & 0 & 3 \\
+                        1 & 0 & 3 & 0
+                  \end{bmatrix}
+            $
+
+      \item[26.]  Use an incidence matrix to represent the graphs in Exercises 1 and 2.
+            %TODO: Should probably label the edges.
+            \begin{tasks}(2)
+                  \task \text{}\\
+                  \includegraphics[scale = 0.7]{img/10_3_1_graph.png}
+                  \task \text{}\\
+                  \includegraphics[scale = 0.7]{img/10_3_2_graph.png}
+            \end{tasks}
+            \answer \\
+            \begin{enumerate}[a.]
+                  \item $
+                              \begin{bmatrix}
+                                    1 & 1 & 0 & 0 & 1 \\
+                                    0 & 1 & 1 & 0 & 0 \\
+                                    1 & 0 & 0 & 1 & 0 \\
+                                    0 & 0 & 1 & 1 & 1
+                              \end{bmatrix}
+                        $
+                  \item $
+                              \begin{bmatrix}
+                                    1 & 1 & 0 & 0 & 0 & 0 \\
+                                    0 & 1 & 1 & 0 & 1 & 0 \\
+                                    0 & 0 & 0 & 1 & 0 & 1 \\
+                                    1 & 0 & 1 & 1 & 0 & 0 \\
+                                    0 & 0 & 0 & 0 & 1 & 1
+                              \end{bmatrix}
+                        $
+            \end{enumerate}
+\end{itemize}
+In Exercises 38 and 42 determine whether the given pair of graphs
+is isomorphic. Exhibit an isomorphism or provide a rigorous
+argument that none exists.
+\begin{itemize}
+      \item[38.]\text{}\\
+            \includegraphics[]{img/10_3_38_graph.png} \\
+            \answer \\
+            These graphs are isomorphic with a function $f$ that has $f(u_1) = v_1,\ f(u_2) =v_5,\
+                  f(u_3) = v_2,\ f(u_4) = v_3,\ f(u_5) = v_4$
+      \item[42.]\text{}\\
+            \includegraphics[scale = 0.7]{img/10_3_42_graph.png} \\
+            \answer \\
+            They are not isomorphic because $deg(u_4) =3$ so it must map to $v_3$ since it is the only one in the second graph with
+            the same degree. However it can't map to $v_3$ since it must also be adjacent to
+            exactly one vertex of degree 4 but $v_3$ is adjacent to two degree 4 vertices.
+
+\end{itemize}
 
 \subsection{10.4}
 %TODO: 10.4 – 2, 8, 14
+\begin{itemize}
+      \item[2.]  Does each of these lists of vertices form a path in the
+            following graph? Which paths are simple? Which are circuits? What are
+            the lengths of those that are paths?
+            \begin{tasks}[item-format=\textit](2)
+                  \task a, b, e, c, b
+                  \task a, d, a, d, a
+                  \task a, d, b, e, a
+                  \task a, b, e, c, b, d, a
+            \end{tasks}
+            \includegraphics[scale = 0.7]{img/10_4_2_graph.png}\\
+            \answer
+            \begin{enumerate}[a.]
+                  \item Simple path, length: 4
+                  \item Not simple path, length: 4
+                  \item Not a path
+                  \item Not a path
+            \end{enumerate}
+      
+      \item[8.]  What do the connected components of a collaboration
+graph represent? \\
+\answer \\
+They represent the largest set of people who have worked together or there is 
+a way to get from one person to another via the other people in the set.
+
+\item[14.]  Find the strongly connected components of each of these
+graphs.
+\begin{enumerate}[a.]
+      \item \text{} \\ 
+      \includegraphics[scale=0.7]{img/10_4_14a_graph.png}
+
+      \item \text{} \\ 
+      \includegraphics[scale=0.7]{img/10_4_14b_graph.png}
+      
+      \item \text{} \\ 
+      \includegraphics[scale=0.7]{img/10_4_14c_graph.png}
+\end{enumerate}
+\answer
+\begin{enumerate}[a.]
+      \item $\{a, b, e\},\ \{c\},\ \{d\}$
+      \item $\{c,d,e\},\ \{a\},\ \{b\},\ \{f\}$
+      \item $\{a, b, c, d, f, g, h, i\},\ \{e\}$
+\end{enumerate}
+
+
+\end{itemize}
 
 \subsection{10.5}
-%TODO: 10.5 – 2
+\begin{itemize}
+      \item[2.] Determine whether the given graph has an
+Euler circuit. Construct such a circuit when one exists. If
+no Euler circuit exists, determine whether the graph has an
+Euler path and construct such a path if one exists. \\
+\includegraphics[]{img/10_5_2_graph.png} \\
+\answer \\
+An Euler circuit exists since all vertices have an even degree. (\textit{a, b, e, d, g, h, f, i, h, e, f, c, b, d, a})
+\end{itemize}
