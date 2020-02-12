@@ -1,6 +1,5 @@
 \section{Chapter 11}
 \subsection{11.1}
-%TODO: 11.1 – 2, 4, 6, 10, 18, 20
 \begin{itemize}
     \item[2.] Which of these graphs are trees? \vspace{1mm}\\
           \includegraphics[scale = 0.4]{img/11_1_2_graphs.png} \\
@@ -76,7 +75,6 @@
 \end{itemize}
 
 \subsection{11.3}
-%TODO: 11.3 – 8, 12, 14, 16, 22, 24
 \begin{itemize}
     \item[8.] Determine the order in which a preorder
           traversal visits the vertices of the given ordered rooted tree. \\
@@ -97,12 +95,101 @@ in Exercise 8 visited using a postorder traversal?\\
 \answer \\
 \textit{d, i, m, n, o, j, e, b, f, g, k, p, l, h, c, a}
 
-\item[16.] Represent the expression
- $((x + 2) \uparrow 3) \cdot (y -(3 + x)) - 5$ using a binary tree.
+\item[16.] 
+\begin{enumerate}[a.]
+\item Represent the expression $((x + 2) \uparrow 3) \cdot (y -(3 + x)) - 5$ using a binary tree.
+\item Write this expression in prefix notation.
+\item Write this expression in postfix notation.
+\item Write this expression in infix notation.
+\end{enumerate}
+\answer \\
+\begin{enumerate}[a.]
+    \item \text{}\\
+    \includegraphics[scale = 0.7]{img/11_3_16_tree.png}
+    \item - * $\uparrow$ + $x$ 2 3 - $y$ + 3 $x$ 5
+    \item $x$ 2 + 3 $\uparrow$ $y$ 3 $x$ + - * 5 -
+    \item $(((x + 2) \uparrow 3) \cdot (y -(3 + x))) - 5$
+\end{enumerate}
 
+\item[22.]  Draw the ordered rooted tree corresponding to each of
+these arithmetic expressions written in prefix notation.
+Then write each expression using infix notation.
+\begin{enumerate}[a.]
+\item + * + - 5 3 2 1 4
+\item $\uparrow$ + 2 3 - 5 1
+\item * / 9 3 + * 2 4 - 7 6
+\end{enumerate}
+\answer
+\begin{enumerate}[a.]
+    \item $(((5-3) + 2) \cdot 1) + 4 $ \\
+    \includegraphics[]{img/11_3_22a_tree.png}
+    \item $(2+3) \uparrow (5-1) $ \\
+    \includegraphics[]{img/11_3_22b_tree.png}
+    \item $(9/3)*((2*4)+(7-6))$ \\
+    \includegraphics[]{img/11_3_22c_tree.png}
+\end{enumerate}
 
-
+\item[24.]  What is the value of each of these postfix expressions?
+\begin{enumerate}[a.]
+\item 5 2 1 - - 3 1 4 + + *
+\item 9 3 / 5 + 7 2 - *
+\item 3 2 * 2 $\uparrow$ 5 3 - 8 4 / * -
+\end{enumerate}
+\answer
+\begin{enumerate}[a.]
+    \item 32
+    \item 40
+    \item 32
+\end{enumerate}
 \end{itemize}
 
 \subsection{11.4}
-%TODO: 11.4 – 4, 8, 10, 14, 16
+\begin{itemize}
+    \item[4.] Find a spanning tree for the graph shown by 
+    removing edges in simple circuits. \\
+    \includegraphics[scale=0.7]{img/11_4_4_graph.png} \\
+    \answer \\
+    \text{} \\
+    \includegraphics[scale=0.7]{img/11_4_4_tree.png}
+\end{itemize}
+For 8 and 10 draw all the spanning trees of the given
+simple graph.
+\begin{itemize}
+\item[8.]  \text{}\\
+\includegraphics[scale = 0.2]{img/11_4_8_graph.png} \vspace{2mm} \\
+\answer \\
+\includegraphics[scale = 0.2]{img/11_4_8_tree1.png} 
+\includegraphics[scale = 0.2]{img/11_4_8_tree2.png} 
+\includegraphics[scale = 0.2]{img/11_4_8_tree3.png}
+
+\item[10.] \text{}\\
+\includegraphics[scale = 0.3]{img/11_4_10_graph.png} \vspace{2mm} \\
+\answer \\
+\includegraphics[scale = 0.3]{img/11_4_10_tree1.png} 
+\includegraphics[scale = 0.3]{img/11_4_10_tree2.png} \\
+\includegraphics[scale = 0.3]{img/11_4_10_tree3.png} 
+\includegraphics[scale = 0.3]{img/11_4_10_tree4.png}
+
+\item[14.] Use depth-first search to produce a spanning tree for the given simple graph. Choose a as the root of
+this spanning tree and assume that the vertices are ordered
+alphabetically. \\
+\includegraphics[scale = 0.25]{img/11_4_14_graph.png} \\
+\answer \\
+First start at a, then connect to b since b is before g, then connect to c, h, then g since it 
+is before i and m then finally connect to l. Now return back to h and then connect 
+to i then to d, e, f, k, j, n. Finally return back to i and connect to m. \\
+\includegraphics[scale = 0.25]{img/11_4_14_tree.png}
+
+\item[16.]  Use breadth-first search to produce a spanning tree for
+each of the simple graphs in Exercises 13–15. Choose a
+as the root of each spanning tree. \\
+\includegraphics[scale = 0.25]{img/11_4_13_graph.png} \quad
+\includegraphics[scale = 0.25]{img/11_4_14_graph.png} \vspace{2mm}\\
+\includegraphics[scale = 0.5]{img/11_4_15_graph.png} \vspace{1.5mm}\\
+\answer \\
+\includegraphics[scale = 0.25]{img/11_4_13_tree.png} \quad
+\includegraphics[scale = 0.25]{img/11_4_14_tree_bfs.png} \vspace{2mm}\\
+\includegraphics[scale = 0.5]{img/11_4_15_tree.png} \\
+
+\end{itemize}
+
